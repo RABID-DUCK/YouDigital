@@ -1,0 +1,31 @@
+const arr = [10, 12, 15, 21];
+
+// ----------1-----------------
+
+// for(var i = 0; i < arr.length; i++){
+
+//     setTimeout(function () {
+//         console.log(arr[i] > 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
+//     }, 3000)
+// } Выведет Bad: undefiend, так как к моменту таймаута "i" будет уже равно последнему значению, которое вышло за границы массива. 
+
+//--------Вариант 1------
+// Можно было бы сказать поменять var на let, но это неинтересно поэтому варианты другие:
+// я не понял как вам модификации нужно сделать с таймаутом или без. На всякий случай буду делать и так, и так
+
+arr.forEach(item => console.log(item > 13 ? `Good: ${item}` : `Bad: ${item}`));
+
+arr.forEach((elem) => {
+    setTimeout(function() {
+        console.log(elem > 13 ? `Good: ${elem}` : `Bad: ${elem}`)
+    }, 3000)
+})
+
+//--------Вариант 2------
+arr.map(item => console.log(item > 13 ? `Good: ${item}` : `Bad: ${item}`));
+
+arr.map(elem => {
+    setTimeout(function() {
+        console.log(elem > 13 ? `Good: ${elem}` : `Bad: ${elem}`)
+    }, 3000)
+});
