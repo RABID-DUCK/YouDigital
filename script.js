@@ -34,7 +34,7 @@ function getData(){
                 <td>${elem.title}</td>
                 <td>${elem.body}</td>
             </tr>
-            `)
+            `);
         });
     })
 }
